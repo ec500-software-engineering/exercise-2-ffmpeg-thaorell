@@ -5,9 +5,9 @@ import shutil
 
 DUR = '1'
 
-# EXE = shutil.which('compute')
-# if not EXE:
-#     raise FileNotFoundError('compute not found')
+EXE = shutil.which(' ffmpeg')
+if not EXE:
+    raise FileNotFoundError('ffmpeg not found')
 
 
 @pytest.fixture
