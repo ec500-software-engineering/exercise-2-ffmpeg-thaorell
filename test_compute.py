@@ -1,9 +1,8 @@
 from compute import process
 import queue 
 import pytest
-from test_init import genpat
 
-def test_ffmpeg(genpat):
+def test_compute(genpat):
 	q = queue.Queue()
 	vid = str(genpat)
 	q.put(vid)
