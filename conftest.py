@@ -3,10 +3,12 @@ from pathlib import Path
 import pytest
 import shutil
 
-DUR = '1'
+length = '1'
 
-EXE = shutil.which(' ffmpeg')
-if not EXE:
+
+if subprocess.call(["ffmpeg"]):
+    cmd = 'ffmpeg'
+else:
     raise FileNotFoundError('ffmpeg not found')
 
 
@@ -17,6 +19,6 @@ def genpat(tmpdir) -> Path:
     """
     vidfn = tmpdir / 'bars.avi'
 
-    subprocess.check_call([EXE, '-v', 'warning', '-f', 'lavfi', '-i', 'smptebars', '-t', DUR, str(vidfn)])
+    subprocess.check_call([cmd, '-v', 'warning', '-f', 'lavfi', '-i', 'smptebars', '-t', length, str(vidfn)])
 
     return vidfn
