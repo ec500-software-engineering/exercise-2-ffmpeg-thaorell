@@ -1,13 +1,14 @@
-from ffmpeg import ffmpeg_convert
+from compute import process
 import queue 
 import pytest
+from test_init import genpat
 
 def test_ffmpeg(genpat):
 	q = queue.Queue()
 	vid = str(genpat)
 	q.put(vid)
-	dur = ffmpeg_convert(q,vid)
-	assert dur == pytest.approx(1.)
+	length = process(q,vid)
+	assert length == pytest.approx(1.)
 
 if __name__ == '__main__':
 	pytest.main(['-x',__file__])

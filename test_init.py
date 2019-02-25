@@ -1,4 +1,3 @@
-#got from example pytest on class github
 import subprocess
 from pathlib import Path
 import pytest
