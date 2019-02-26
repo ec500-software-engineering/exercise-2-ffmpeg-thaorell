@@ -10,7 +10,7 @@ After finishing a job, the program will also check the processed outputs and pri
 The program does get the right duration and satisfy the requirements
 
 ## Architecture diagram
-![alt text](https://imgur.com/a/ca9heoE)
+![alt text](https://i.imgur.com/RLFTDzv.jpg)
 
 1. When an input gets in, the main program will create three threads.
 2. On each threads, the follwing tasks are performed in ffmpeg:
