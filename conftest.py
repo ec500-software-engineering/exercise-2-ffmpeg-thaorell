@@ -17,7 +17,6 @@ def genpat(tmpdir) -> Path:
     generate test video
     """
     vidfn = tmpdir / 'bars.avi'
-
     subprocess.check_call([cmd, '-v', 'warning', '-f', 'lavfi', '-i', 'smptebars', '-t', length, str(vidfn)])
 
     return vidfn
