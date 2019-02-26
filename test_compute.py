@@ -24,8 +24,6 @@ def test_compute(genpat):
 
 ## Check the frame rates
 def getRate(vid):
-	return subprocess.call(['ffprobe', '-v' , 'error',
-		'-select_streams' , 'v:0' , '-show_entries' , 'stream=avg_frame_rate' ,
-		'-of' , 'default=noprint_wrappers=1:nokey=1' , vid])
+	return subprocess.call(['ffprobe', '-v' , 'error', '-select_streams' , 'v:0' , '-show_entries' , 'stream=avg_frame_rate' ,'-of' , 'default=noprint_wrappers=1:nokey=1' , vid])
 if __name__ == '__main__':
 	pytest.main(['-x',__file__])
