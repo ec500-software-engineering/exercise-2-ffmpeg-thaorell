@@ -1,5 +1,5 @@
-# python-CI-template
-Python CI template for EC500 Software Engineering
+# FFMPEG
+Exercise 2- Python with ffmpeg
 
 ## Introduction
 The task for this assignment is to convert videos to 720p and 480p resolutions. 
